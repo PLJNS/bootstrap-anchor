@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-anchor",
+  "version": "0.0.0",
+  "description": "Bootstrap and Anchor CMS in a shiny theme.",
+  "main": "posts.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PLJNS/bootstrap-anchor.git"
+  },
+  "keywords": [
+    "boostrap",
+    "anchor",
+    "cms"
+  ],
+  "author": "PLJNS",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/PLJNS/bootstrap-anchor/issues"
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
