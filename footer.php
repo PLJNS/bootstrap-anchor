@@ -15,6 +15,7 @@
             </footer>
             
         </div>
+        <script src="<?php echo theme_url('/js/main.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/jquery.min.js'); ?>"></script>
         <script src="<?php echo theme_url('/js/bootstrap.min.js'); ?>"></script>
     </body>
