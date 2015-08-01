@@ -22,3 +22,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.no-margin-top {
+	margin-top:0;
+}

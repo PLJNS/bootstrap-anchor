@@ -51,6 +51,18 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<?php if(has_menu_items()): ?>
 						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+								<?php while(categories()): ?>
+									<li>
+										<a href="<?php echo category_url(); ?>" title="<?php echo category_description(); ?>">
+											<?php echo category_title(); ?> 
+										</a>
+									</li>
+								<?php endwhile; ?>
+								</ul>
+							</li>
 							<?php while(menu_items()): ?>
 								<li <?php echo (menu_active() ? 'class="active"' : ''); ?>>
 									<a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
