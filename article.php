@@ -1,63 +1,58 @@
 <?php theme_include('header'); ?>
-
-		<section class="content wrap" id="article-<?php echo article_id(); ?>">
-			<h1><?php echo article_title(); ?></h1>
-
-			<article>
-				<?php echo article_markdown(); ?>
-			</article>
-
-			<section class="footnote">
-				<!-- Unfortunately, CSS means everything's got to be inline. -->
-				<p>This article is my <?php echo numeral(total_articles()); ?> oldest. It is <?php echo count_words(article_markdown()); ?> words long<?php if(comments_open()): ?>, and it’s got <?php echo total_comments() . pluralise(total_comments(), ' comment'); ?> for now.<?php endif; ?> <?php echo article_custom_field('attribution'); ?></p>
-			</section>
-		</section>
-
-		<?php if(comments_open()): ?>
-		<section class="comments">
-			<?php if(has_comments()): ?>
-			<ul class="commentlist">
-				<?php $i = 0; while(comments()): $i++; ?>
-				<li class="comment" id="comment-<?php echo comment_id(); ?>">
-					<div class="wrap">
-						<h2><?php echo comment_name(); ?></h2>
-						<time><?php echo relative_time(comment_time()); ?></time>
-
-						<div class="content">
-							<?php echo comment_text(); ?>
-						</div>
-
-						<span class="counter"><?php echo $i; ?></span>
-					</div>
-				</li>
-				<?php endwhile; ?>
-			</ul>
-			<?php endif; ?>
-
-			<form id="comment" class="commentform wrap" method="post" action="<?php echo comment_form_url(); ?>#comment">
-				<?php echo comment_form_notifications(); ?>
-
-				<p class="name">
-					<label for="name">Your name:</label>
-					<?php echo comment_form_input_name('placeholder="Your name"'); ?>
-				</p>
-
-				<p class="email">
-					<label for="email">Your email address:</label>
-					<?php echo comment_form_input_email('placeholder="Your email (won’t be published)"'); ?>
-				</p>
-
-				<p class="textarea">
-					<label for="text">Your comment:</label>
-					<?php echo comment_form_input_text('placeholder="Your comment"'); ?>
-				</p>
-
+<h1 class="no-margin-top"><?php echo article_title(); ?></h1>
+<article>
+	<?php echo article_markdown(); ?>
+</article>
+<?php if(comments_open()): ?>
+	<?php if(has_comments()): ?>
+		<hr>
+		<h2>Comments</h2>
+		<?php while(comments()): ?>
+			<div class="media">
+				<div class="media-body">
+					<h4 class="media-heading"><?php echo comment_name(); ?> commented <time><?php echo relative_time(comment_time()); ?></time></h4>
+					<p><?php echo comment_text(); ?></p>
+				</div>
+			</div>
+			<hr>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	<h2>Add a comment</h2>
+	<form id="comment" class="commentform wrap" method="post" action="<?php echo comment_form_url(); ?>#comment">
+		<?php if($x = comment_form_notifications()): ?>
+			<div class="alert alert-success" role="alert">
+				<?php echo $x; ?>
+			</div>
+		<?php endif ?>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<p class="name">
+						<label for="name">Your name:</label>
+						<?php echo comment_form_input_name('placeholder="Your name" class="form-control"'); ?>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<p class="email">
+						<label for="email">Your email address:</label>
+						<?php echo comment_form_input_email('placeholder="Your email (won’t be published)" class="form-control"'); ?>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<p class="textarea">
+						<label for="text">Your comment:</label>
+						<?php echo comment_form_input_text('placeholder="Your comment" class="form-control"'); ?>
+					</p>
+				</div>
 				<p class="submit">
 					<?php echo comment_form_button(); ?>
 				</p>
-			</form>
-
-		</section>
-		<?php endif; ?>
-
+			</div>
+		</div>
+	</form>
+<?php endif; ?>
 <?php theme_include('footer'); ?>

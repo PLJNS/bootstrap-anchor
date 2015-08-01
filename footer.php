@@ -1,11 +1,13 @@
-
+		</div>
+	</div>
+</div>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-5 text-left hidden-xs">
+			<div class="col-xs-5 text-left">
 				<p id="footer-copyright">&copy; <?php echo date('Y'); ?> <?php echo site_name(); ?>. All rights reserved.</p>
 			</div>
-			<div class="col-xs-7 text-right hidden-xs">
+			<div class="col-xs-7 text-right">
 				<ul class="list-inline">
 			<li><a href="<?php echo rss_url(); ?>">RSS</a></li>
 			<?php if(twitter_account()): ?>
@@ -14,9 +16,6 @@
 			<li><a href="<?php echo base_url('admin'); ?>" title="Administer your site!">Admin area</a></li>
 			<li><a href="/" title="Return to my website.">Home</a></li>
 				</ul>
-			</div>
-			<div class="col-xs-12 text-center visible-xs">
-				<p id="footer-copyright">© 2015 PLJNS, LLC.</p>
 			</div>
 		</div>
 	</div>

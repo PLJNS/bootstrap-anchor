@@ -48,7 +48,7 @@
 					</button>
 					<a class="navbar-brand" href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse">
+				<div id="navbar" class="navbar-collapse collapse navbar-right">
 					<?php if(has_menu_items()): ?>
 						<ul class="nav navbar-nav">
 							<li class="dropdown">
@@ -81,4 +81,6 @@
 				</div>
 			</div>
 		</nav>
-	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">

@@ -4,7 +4,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 .footer {
   position: absolute;
@@ -25,4 +25,8 @@ body {
 
 .no-margin-top {
 	margin-top:0;
+}
+
+.alert .notifications p {
+	margin-bottom: 0;
 }
