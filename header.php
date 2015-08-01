@@ -6,9 +6,7 @@
 
 		<meta name="description" content="<?php echo site_description(); ?>">
 
-		<link rel="stylesheet" href="<?php echo theme_url('/css/reset.css'); ?>">
-		<link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>">
-		<link rel="stylesheet" href="<?php echo theme_url('/css/small.css'); ?>" media="(max-width: 400px)">
+		<link rel="stylesheet" href="<?php echo theme_url('/css/bootstrap.min.css'); ?>">
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 		<link rel="shortcut icon" href="<?php echo theme_url('img/favicon.png'); ?>">
@@ -18,8 +16,6 @@
 		<![endif]-->
 
 		<script>var base = '<?php echo theme_url(); ?>';</script>
-		<script src="<?php echo asset_url('/js/zepto.js'); ?>"></script>
-		<script src="<?php echo theme_url('/js/main.js'); ?>"></script>
 
 	    <meta name="viewport" content="width=device-width">
 	    <meta name="generator" content="Anchor CMS">

@@ -13,8 +13,9 @@
 	                    <li><a href="/" title="Return to my website.">Home</a></li>
 	                </ul>
 	            </footer>
-
+	            
 	        </div>
         </div>
+        <script src="<?php echo theme_url('/js/bootstrap.min.js'); ?>"></script>
     </body>
 </html>
